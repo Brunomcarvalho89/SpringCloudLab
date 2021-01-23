@@ -9,8 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.cloud</groupId>
-    <artifactId>ServiceRegistry</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>service-registry</artifactId>
+    <version>1.0.0</version>
     <name>ServiceRegistry</name>
     <description>Service registry for test.</description>
     <properties>

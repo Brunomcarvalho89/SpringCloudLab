@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.cloud</groupId>
-    <artifactId>MessageServiceName</artifactId>
+    <artifactId>message-service-name</artifactId>
     <version>1.0.0</version>
     <name>MessageServiceName</name>
     <description>Subject for send hello.</description>
