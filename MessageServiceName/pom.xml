@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.cloud</groupId>
-    <artifactId>MessageServiceSubject</artifactId>
+    <artifactId>MessageServiceName</artifactId>
     <version>1.0.0</version>
-    <name>MessageServiceSubject</name>
+    <name>MessageServiceName</name>
     <description>Subject for send hello.</description>
     <properties>
         <java.version>11</java.version>
