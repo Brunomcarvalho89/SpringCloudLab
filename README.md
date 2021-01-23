@@ -2,7 +2,13 @@
 
 Um simples aplicativo demonstrando o funcionamento de algumas tecnologias do conjunto Spring Cloud.
 
-O aplicativo realiza a saudação a um determinado sujeito especificado em um dos serviços.
+O aplicativo realiza saudação a um determinado nome especificado em um dos serviços. As saudações podem ser em portugue e ingles.
+
+Utilizando:
+
+Service registry: spring-cloud-starter-netflix-eureka-server
+Circuit Breaker:  spring-cloud-starter-netflix-hystrix
+
 
 ### Serviço 1: 
 MessageServiceSubject -> Serviço responsável por fornercer o nome do sujeito que sera dado a saudação.
