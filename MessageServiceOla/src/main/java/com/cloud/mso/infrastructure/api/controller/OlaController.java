@@ -1,7 +1,9 @@
 package com.cloud.mso.infrastructure.api.controller;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,24 +12,31 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  *
- * @author bruno
+ * @author brunomcarvalho89@gmail.com
  */
 @RestController
 @RequestMapping("/message")
+@RefreshScope
 public class OlaController {
 
     @Autowired
     private RestTemplate restTemplate;
 
+    @Value("${description.service}")
+    private String descriptionLanguageService;
+
+    @Autowired
+    private CircuitBreakerFactory circuitBreakerFactory;
+
     @GetMapping
-    @HystrixCommand(fallbackMethod = "helloFallback")
     public ResponseEntity hello() {
-        String subject = this.restTemplate.getForObject("http://message-service-subject/message/subject", String.class);
-        return ResponseEntity.ok(String.format("Olá %s !!!", subject));
+
+        return circuitBreakerFactory.create("helloFallback").run(() -> {
+            String subject = this.restTemplate.getForObject("http://message-service-name/message/name", String.class);
+            return ResponseEntity.ok(String.format("[%s] Olá %s !!!", this.descriptionLanguageService, subject));
+        }, t -> {
+            return ResponseEntity.ok("Olá.");
+        });
     }
-    
-    public ResponseEntity helloFallback(){
-        return ResponseEntity.ok("Olá.");
-    } 
 
 }

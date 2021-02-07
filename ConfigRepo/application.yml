@@ -1,10 +1,2 @@
-my:
-	greeting: Hello World from config server
-	list:
-		values: One, Two, Three, Four
-
-db:
-	connection: connection-string-here
-	host: 127.0.0.1
-	port: 1200
-	
+description:
+            service: Global- Overwritten by the configuration server

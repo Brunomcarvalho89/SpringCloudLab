@@ -8,18 +8,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
- * @author bruno
+ * @author brunomcarvalho89@gmail.com
  */
 @RestController
 @RequestMapping("/message")
-public class SubjectController {
+public class NameController {
 
-    @Value("${subject}")
-    private String subject;
+    @Value("${name}")
+    private String name;
 
-    @GetMapping("subject")
+    @GetMapping("/name")
     public ResponseEntity hello() {
-        return ResponseEntity.ok(this.subject);
+        return ResponseEntity.ok(this.name);
     }
 
 }
