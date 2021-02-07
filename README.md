@@ -2,7 +2,7 @@
 
 Um simples aplicativo demonstrando o funcionamento de algumas tecnologias do pacote Spring Cloud.
 
-O aplicativo realiza saudação a um determinado nome especificado em um dos serviços. As saudações podem ser em portugue e ingles.
+O aplicativo realiza uma saudação a um determinado nome especificado em no serviço 1. As saudações podem ser em portugue e ingles.
 
 Utilizando:
 
