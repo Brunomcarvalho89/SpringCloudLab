@@ -4,6 +4,8 @@ Um simples aplicativo demonstrando o funcionamento de algumas tecnologias do pac
 
 O aplicativo realiza uma saudação a um determinado nome especificado em no serviço 1. As saudações podem ser em português e inglês.
 
+![alt text](https://github.com/Brunomcarvalho89/SpringCloudLab/blob/main/spring.cloud.lab.png)
+
 Utilizando:
 
 Service registry: spring-cloud-starter-netflix-eureka-server
