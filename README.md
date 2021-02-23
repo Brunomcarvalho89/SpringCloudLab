@@ -39,4 +39,4 @@ MessageServiceGateway -> Servidor de gateway utilizando o Spring Cloud Gateway.
 ### Repositorio de configuracao:
 ConfigRepo -> Para teste local deve ser inicializado um repositorio local para o diretorio ConfigRepo. A configuração do servidor de configuracao é baseado no git.(spring.cloud.config.server.git.uri)
 
-** O foco deste lab foi demostrar o uso das tecnologias do SpringCloud, então nao foi escrito nenhuma classe de testes para o projeto.(O projeto WeatherIntegrationAPI está com 100 porcento de cobertura de testes de unidade.)
+** O foco deste lab foi demostrar o uso das tecnologias do SpringCloud, então nao foi escrito nenhuma classe de testes para o projeto.(O projeto WeatherIntegrationAPI está com cobertura de testes de unidade usando o JUnit, se esse for seu foco da uma olhada lá. )
