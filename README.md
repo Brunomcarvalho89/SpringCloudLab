@@ -2,7 +2,7 @@
 
 Um simples aplicativo demonstrando o funcionamento de algumas tecnologias do pacote Spring Cloud.
 
-O aplicativo realiza uma saudação a um determinado nome especificado em no serviço 1. As saudações podem ser em português e inglês.
+O aplicativo realiza uma saudação a um determinado nome especificado no serviço 1(MessageServiceName). As saudações podem ser em português e inglês.
 
 ![alt text](https://github.com/Brunomcarvalho89/SpringCloudLab/blob/main/spring.cloud.lab.png)
 
